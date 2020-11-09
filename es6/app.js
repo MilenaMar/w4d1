@@ -189,6 +189,8 @@ const aFunc = (...args) => {
 
 const numbers = [1, 1000, 3000, 5];
 
+console.log(Math.max(numbers));
 console.log(Math.max(...numbers));
+console.log(Math.max(1, 1000, 3000, 5));
 
 aFunc(1, 2, true, null, { name: "gosia" });
