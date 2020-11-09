@@ -67,7 +67,7 @@ const object = () => {
   };
 };
 
-const obj2 = () => ({ name: "monique" });
+// const obj2 = () => ({ name: "monique" });
 
 const oneArg = (name) => `Hello ${name}`;
 const multipleArgs = (as, we, usually, doNormallyt) => {
@@ -137,6 +137,7 @@ const user3 = {
     { language: "portuguese", level: "nope" },
     { language: "spanish", level: "porsupuesto" },
   ],
+  password: "12345678",
 };
 
 const {
@@ -148,3 +149,46 @@ const {
 
 const speaksSpanish = `Querien speaks spanish at a ${level} level`;
 console.log("level:", level);
+
+// var numberOfTimes = 100;
+// for (var numberOfTimes = 0; numberOfTimes < 250; numberOfTimes++) {}
+
+// console.log(numberOfTimes);
+
+const obj1 = { hello: "world", arr: [1, 2, 3] };
+
+const obj2 = obj1;
+
+const obj3 = { ...obj1 };
+
+const arr1 = [1, 2, 3, { banana: "yellow" }];
+const arr2 = [...arr1];
+const arr3 = [, ...arr2];
+const arr4 = [...arr1, ...arr2];
+const [, , ...martaSH] = arr4;
+
+const { password, ...dinosaurOrCrocodile } = user3;
+console.log("rest:", dinosaurOrCrocodile);
+
+/* const user3 = {
+   name: "Querien",
+   nationality: "Dutch",
+   languagesSpoken: [
+     { language: "portuguese", level: "nope" },
+     { language: "spanish", level: "porsupuesto" },
+   ],
+   password: "12345678",
+ }; */
+
+const user4 = { ...user3, name: "Monique" };
+const { password: ignore, ...restOfMonique } = user4;
+
+const aFunc = (...args) => {
+  console.log(args);
+};
+
+const numbers = [1, 1000, 3000, 5];
+
+console.log(Math.max(...numbers));
+
+aFunc(1, 2, true, null, { name: "gosia" });
